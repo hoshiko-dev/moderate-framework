@@ -1,0 +1,21 @@
+{# empty Twig template #}
+{% include 'common/header.html.twig' %}
+<div class="container">
+    <div class="row">
+        <div class="row mt100">
+            <div class="col-lg-8 text-center">
+                <table class="table">
+                {%for member in members %}
+                    <tr>
+                        <td>{{member.member_id}}</td>
+                        <td>{{member.member_name}}</td>
+                        <td>{{email}}</td>
+                    </tr>
+                {% endfor %}
+                </table>
+            </div>
+            
+        </div>
+    </div>
+</div>
+{% include 'common/footer.html.twig' %}
