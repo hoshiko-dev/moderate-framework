@@ -9,13 +9,8 @@
  `php composer.phar install --no-dev`
 
 # インストールモジュールとバージョン
- * PHPのバージョンは5.6以降。
- * DBアクセスにはORMのIdiormとParisを採用
- * セッション管理およびValidationにはLaravelのilluminateを採用。
- * テンプレートエンジンはTwig/Smarty3を切り替えて使用可能。(デフォルトTwig)
 
-
-     "php": "~5.6.7",
+    "php": "~5.6.7",
     "slim/slim": "~2.6.2",
     "slim/extras": "2.0.*",
     "j4mie/idiorm": "1.*",
@@ -28,6 +23,10 @@
     "Illuminate/translation": "~5.1.22",
     "j4mie/paris": "~1.5.4"
 
+ * PHPのバージョンは5.6以降。
+ * DBアクセスにはORMのIdiormとParisを採用
+ * セッション管理およびValidationにはLaravelのilluminateを採用。
+ * テンプレートエンジンはTwig/Smarty3を切り替えて使用可能。(デフォルトTwig)
 
 # パッケージ構成
 
