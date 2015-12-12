@@ -1,0 +1,23 @@
+<?php
+
+$configDev = [
+    'url' => 'http://XXX.XXX.XXX.XXX/',
+    // PATH設定がある場合
+    'path' => '/',
+    // SlimのDebugモード
+    'debug'              => true,
+    // Slimのログ設定
+    'log.writer' =>  new \Slim\Extras\Log\DateTimeFileWriter(
+        [
+        'message_format' => '[%date%] %label%: %message%',
+        'path' => __DIR__ . '/../logs/',
+        'name_format' => 'Ymd',
+        'extension' => 'dev.log',
+        ]
+    ),
+    'log.level'          => \Slim\Log::DEBUG,
+    'log.enabled'        => true,
+    
+    'cookies.secure' => false,
+
+];
