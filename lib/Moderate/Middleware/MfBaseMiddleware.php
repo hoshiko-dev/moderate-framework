@@ -44,9 +44,14 @@ abstract class MfBaseMiddleware extends Middleware
         }
 
         $files = scandir($path);
-        $files = array_filter($files, function ($file) {
-            // 除去
-            return !in_array($file, array('.', '..'));
+        $pattern = '/' . $filePartsName . '$/';
+        $files = array_filter($files, function ($file) use($pattern) {
+            if (in_array($file, array('.', '..'))) {
+                return false;
+            } else if (preg_match($pattern, $file)) {
+                return true;
+            }
+            return false;
         });
         $targets = [];
         foreach ($files as $file) {
